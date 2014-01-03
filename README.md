@@ -1,6 +1,6 @@
 # GoogleSearchCriterion
 
-TODO: Write a gem description
+A toy to compare words against google search results
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+(coming soon)
 
 ## Contributing
 

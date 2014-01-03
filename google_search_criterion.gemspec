@@ -1,4 +1,5 @@
 # coding: utf-8
+
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'google_search_criterion/version'
@@ -10,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["giorgos.tsiftsis@skroutz.gr"]
   spec.summary       = %q{ A toy to compare words against google search results }
   spec.description   = %q{ A toy to compare words against google search results }
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/chief/google_search_criterion"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
