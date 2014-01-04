@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'google_search_criterion'
+
+begin
+  GoogleSearchCriterion::CLI.start(ARGV)
+rescue Interrupt => e
+  $stderr.puts e.backtrace.join("\n")
+end
