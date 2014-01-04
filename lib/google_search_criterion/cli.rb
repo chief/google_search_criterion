@@ -2,10 +2,17 @@ require "thor"
 
 module GoogleSearchCriterion
   class CLI < Thor
-    desc "compare WORD ANOTHER_WORD", "compares WORD against ANOTHER_WORD"
-    def compare(word, another_word)
-      puts "#{word} => #{GoogleSearchCriterion::Search.results(word)}"
-      puts "#{another_word} => #{GoogleSearchCriterion::Search.results(another_word)}"
+
+    desc "compare KEYPHRASE ANOTHER_KEYPHRASE",
+         "compares KEYPHRASE against ANOTHER_KEYPHRASE"
+    def compare(keyphrase, another_keyphrase)
+      puts "#{keyphrase} => #{GoogleSearchCriterion::Search.results(keyphrase)}"
+      puts "#{another_keyphrase} => #{GoogleSearchCriterion::Search.results(another_keyphrase)}"
+    end
+
+    desc "get KEYPHRASE", "gets results from Google for KEYPHRASE"
+    def get(keyphrase)
+      puts "#{keyphrase} => #{GoogleSearchCriterion::Search.results(keyphrase)}"
     end
   end
 end
