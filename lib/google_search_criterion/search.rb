@@ -10,10 +10,10 @@ module GoogleSearchCriterion
 
       case tokens.first
       when "About"
-        tokens[1].to_i
+        tokens[1]
       else
-        tokens.first.to_i
-      end
+        tokens.first
+      end.to_s.gsub(",","").to_i
     end
 
     private

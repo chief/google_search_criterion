@@ -19,5 +19,9 @@ describe GoogleSearchCriterion::Search do
           results("αυτό είναι result ασκαρδαμικτι περσεφονη")).to be < 100
       end
     end
+
+    it "transforms numbers correctly" do
+      expect(described_class.results("κάτοικος")).to be > 1_000
+    end
   end
 end
