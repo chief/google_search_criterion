@@ -1,6 +1,9 @@
 # GoogleSearchCriterion
 
-A toy to compare words against google search results
+A toy to compare words against Google search results. Language is a vivid
+organism. There is no right or wrong. By observing results from Google one can
+observe the usage of words and compare them with others. All explanations
+should be avoided :)
 
 ## Installation
 
@@ -18,7 +21,33 @@ Or install it yourself as:
 
 ## Usage
 
-(coming soon)
+Type  ```$ google-results``` for help.
+
+1. Examine names popularity
+
+  In Greece - like everywhere else - we have a couple of very popular first names
+  for men like γιωργος γιαννης κωστας . I believe that γιαννης is more popular
+  than γιωργος and κωστας is in the third place. I can easily investigate my
+  assumption:
+
+  ```
+    $ google-results sort γιαννης γιωργος κωστας
+  ```
+
+2. Examine preferred form of a word
+
+  I want to write αχιλεας but I am not sure if it is written with one 'λ' or
+  2 'λ's or one 'χ'
+
+  ```
+    $ google-results sort αχιλεας αχχιλεας αχιλλεας αχχιλλεας
+  ```
+
+3. I want to see what is the most popular polital party
+
+  ```
+    $ google-results sort "νεα δημοκρατια" πασοκ κκε συριζα ανελ
+  ```
 
 ## Contributing
 
