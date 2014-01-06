@@ -20,6 +20,11 @@ describe GoogleSearchCriterion::Search do
       end
     end
 
+    it "does not apply auto-complete" do
+      expect(described_class.results("κωραης")).not_to eq(
+        described_class.results("κοραης"))
+    end
+
     it "transforms numbers correctly" do
       expect(described_class.results("κάτοικος")).to be > 1_000
     end

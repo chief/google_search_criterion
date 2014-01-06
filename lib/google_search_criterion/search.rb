@@ -26,6 +26,9 @@ module GoogleSearchCriterion
       agent.get('http://google.com/en') do |page|
         search_result = page.form_with(:name => 'gbqf') do |search|
           search.q = keyphrase
+
+          # Avoid google spell checking
+          search.add_field! "nfpr", "1"
         end.submit
 
         results = search_result.search("div#resultStats").text
