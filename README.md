@@ -60,4 +60,4 @@ Type  ```$ google-results``` for help.
 
 ## License
 
-See [License](LICENSE.txt)
+google_search_criterion is licensed under MIT.See [License](LICENSE.txt)
