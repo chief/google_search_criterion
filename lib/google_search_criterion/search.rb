@@ -23,8 +23,8 @@ module GoogleSearchCriterion
 
       agent = Mechanize.new { |agent| agent.user_agent_alias = 'Mac Safari' }
 
-      agent.get('http://google.com/en') do |page|
-        search_result = page.form_with(:name => 'gbqf') do |search|
+      agent.get('http://google.com/?hl=en') do |page|
+        search_result = page.form_with(:name => 'f') do |search|
           search.q = keyphrase
 
           # Avoid google spell checking
